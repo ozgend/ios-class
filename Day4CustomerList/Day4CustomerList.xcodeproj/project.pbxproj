@@ -405,10 +405,12 @@
 		E11285DC183DF37900A2EB9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BT AKADEMI BILGI ILETISIM TEKNOLOJILERI SANAYI VE TICARE";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Day4CustomerList/Day4CustomerList-Prefix.pch";
 				INFOPLIST_FILE = "Day4CustomerList/Day4CustomerList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,10 +419,12 @@
 		E11285DD183DF37900A2EB9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BT AKADEMI BILGI ILETISIM TEKNOLOJILERI SANAYI VE TICARE";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Day4CustomerList/Day4CustomerList-Prefix.pch";
 				INFOPLIST_FILE = "Day4CustomerList/Day4CustomerList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
