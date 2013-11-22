@@ -1,0 +1,9 @@
+#- name list (symbol table) references 
+	nm -u
+	
+#- framework links
+	otool -L
+	
+#- class, category, protocol declarations
+	otool -ov 
+	class-dump
