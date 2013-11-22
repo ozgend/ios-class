@@ -11,10 +11,15 @@
 
 @implementation StarterViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CLLocationManager* manager = [[CLLocationManager alloc] init];
+    manager.delegate = self;
+    manager.distanceFilter = kCLDistanceFilterNone;
+    manager.desiredAccuracy = kCLLocationAccuracyBest;
+    [manager startUpdatingLocation];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -26,7 +31,7 @@
         segueIdentifier = @"loadMaster";
     }
     
-    [self performSegueWithIdentifier:segueIdentifier sender:self];
+    //[self performSegueWithIdentifier:segueIdentifier sender:self];
     
 }
 
@@ -34,5 +39,32 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"location error = %@",error);
+
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation* location= (CLLocation*)locations[0];
+    NSLog(@"didUpdateLocations = %@",locations);
+    
+    NSLog(@"current location = %f, %f",
+          location.coordinate.latitude,
+          location.coordinate.longitude);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @end

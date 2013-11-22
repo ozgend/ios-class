@@ -21,10 +21,22 @@
 
 @implementation LoginViewController
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    NSString* username = [DataHelper loadKey:@"key_username"];
+    NSString* password = [DataHelper loadKey:@"key_password"];
+    
+    self.txtPassword.text = password;
+    self.txtUsername.text = username;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +63,8 @@
     LoginResponseModel *response = [[LoginResponseModel alloc] initWithJsonData:dict];
     
     if (response.Ok) {
+        [DataHelper persistKey:@"key_username" withValue:self.txtUsername.text];
+        [DataHelper persistKey:@"key_password" withValue:self.txtPassword.text];
         [DataHelper persistKey:@"KEY_USERTOKEN" withValue:response.Token];
         
         [self performSegueWithIdentifier:@"loadMasterFromLogin" sender:self];
