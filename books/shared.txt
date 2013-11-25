@@ -1,0 +1,7 @@
+iOS.5.Programming.Pushing.the.Limits.epub
+iOS.iOS.Hackers.Handbook.Charlie.Miller.epub
+Objective-C Design Patterns for iOS.pdf
+OpenGL ES for iOS.pdf
+Programming iOS 5 - Matt Neuburgv 2012.pdf
+
+dl from https://www.dropbox.com/sh/lopwlz8t0uum5uf/PuUOKjN15Z
